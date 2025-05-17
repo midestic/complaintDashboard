@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { IconBase } from "react-icons";
 import { BiCode, BiCreditCard, BiMap } from "react-icons/bi";
 import { BsCreditCard2Back } from "react-icons/bs";
@@ -122,10 +123,11 @@ export default function Routes() {
           <p className=" w-[16px] h-[16px]">
             <FcDocument />{" "}
           </p>
-          <p className=" font-[400] text-[12px] text-[#D0D5DD] ">
-            {" "}
-            Complaints: Log
-          </p>
+          <Link href="/">
+            <p className=" font-[400] text-[12px] text-[#D0D5DD] ">
+              Complaints: Log
+            </p>
+          </Link>
         </div>
       </div>
 

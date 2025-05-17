@@ -1,6 +1,4 @@
-import { AiOutlineBranches } from "react-icons/ai";
 import { BiHome, BiHomeAlt, BiLogOut } from "react-icons/bi";
-import { FaUserShield } from "react-icons/fa";
 import Routes from "./Routes";
 
 let logo = "/images/logo.png";
