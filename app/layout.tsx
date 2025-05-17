@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Complaint Log",
@@ -15,7 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="">
-        <div className="w-[1920px] border mx-auto"></div>
+        <div className="w-[1440px] h-[1024px] border mx-auto  flex just-between items-start ">
+          <div className="border w-[230px] h-full">
+            <Sidebar />
+          </div>
+          <div className="border w-[1210px] h-full">dhdhdh</div>
+        </div>
 
         {children}
       </body>
