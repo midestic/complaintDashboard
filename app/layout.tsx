@@ -8,6 +8,7 @@ import { GrActions } from "react-icons/gr";
 import { CgNotifications } from "react-icons/cg";
 import { BiBell, BiUser } from "react-icons/bi";
 import PR from "@/components/PR";
+import BootstrapClient from "./components/BootstrapClient";
 
 export const metadata: Metadata = {
   title: "Complaint Log",
@@ -30,6 +31,7 @@ export default function RootLayout({
             <Sidebar />
           </div>
 
+          <BootstrapClient />
           <div> {children}</div>
         </div>
       </body>

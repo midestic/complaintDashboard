@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FiFilePlus } from "react-icons/fi";
 import PendingTable from "./tables/PendingTable";
 import ResolvedTable from "./tables/ResolvedTable";
+import ComplaintModal from "./Modals/ComplaintModal";
 
 export default function PR() {
   let [table, setTable] = useState<any>(<PendingTable />);
@@ -17,6 +18,8 @@ export default function PR() {
   }
   return (
     <div>
+      <ComplaintModal />
+
       <div className="w-[1170px] h-[40px] mx-auto flex justify-between items-center mt-[10px] mb-[10px] ">
         <div className="w-[192px] h-[40px] flex justify-between items-center ">
           <div
@@ -32,12 +35,16 @@ export default function PR() {
             Resolved
           </div>
         </div>
-        <div className="w-[136px] h-[36px] bg-[#014daf] flex justify-between items-center  py-[8px] px-[14px] rounded-[3px]">
+        <button
+          className="w-[136px] h-[36px] bg-[#014daf] flex justify-between items-center  py-[8px] px-[14px] rounded-[3px] "
+          data-bs-toggle="modal"
+          data-bs-target="#complaintModal"
+        >
           <FiFilePlus className="w-[14.17px] h-[16.67px]  text-[#FFFFFF] " />
-          <p className="font-[500] text-[12px]  text-[#FFFFFF]">
+          <p className="font-[500] text-[12px]  text-[#FFFFFF] align-middle ">
             Log Complaint
           </p>
-        </div>
+        </button>
       </div>
 
       {table}
