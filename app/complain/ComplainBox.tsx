@@ -8,9 +8,13 @@ export default function ComplainBox() {
   let customerName = complainParams.get("customerName");
   let complaint = complainParams.get("complaint");
 
-  console.log(category);
-  console.log(complaint);
-  console.log(customerName);
+  let date = new Date();
+  let year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
 
   return (
     <div
@@ -97,10 +101,10 @@ export default function ComplainBox() {
               Submission Date
             </p>
             <span className="font-[400] text-[16px] text-[#101828] ">
-              11/14/2024
+              {`${month}/${day}/${year} `}
             </span>
             <span className="ml-[10px] font-[400] text-[16px] text-[#101828] ">
-              10:27:43
+              {`${hours}:${minutes}:${seconds}`}
             </span>
           </div>
 
@@ -116,10 +120,10 @@ export default function ComplainBox() {
               Resolution Date
             </p>
             <span className="font-[400] text-[16px] text-[#101828] ">
-              11/14/2024
+              {`${month}/${day}/${year} `}{" "}
             </span>
             <span className="ml-[10px] font-[400] text-[16px] text-[#101828] ">
-              10:27:43
+              {`${hours}:${minutes}:${seconds}`}
             </span>
           </div>
         </div>

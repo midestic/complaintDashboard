@@ -3,11 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
-import { FcDocument } from "react-icons/fc";
-import { GrActions } from "react-icons/gr";
-import { CgNotifications } from "react-icons/cg";
-import { BiBell, BiUser } from "react-icons/bi";
-import PR from "@/components/PR";
+
 import BootstrapClient from "./components/BootstrapClient";
 
 export const metadata: Metadata = {
@@ -24,15 +20,18 @@ export default function RootLayout({
     <html lang="en">
       <body className="">
         <div
-          className="w-[1440px] h-[1024px] border mx-auto  flex
-         justify-between items-start max-w-[1440px] "
+          className="w-[1440px] h-[100vh]  border mx-auto flex max-md:w-[auto] 
+         justify-between items-start max-w-[1440px]"
         >
-          <div className="border w-[230px] h-full">
+          <div
+            className="border max-md:w-[50%] h-[100vh]
+           overflow-y-scroll max-md:h-[100vh] max-md:overflow-y-scroll "
+          >
             <Sidebar />
           </div>
 
           <BootstrapClient />
-          <div> {children}</div>
+          <div className="w-[auto]"> {children}</div>
         </div>
       </body>
     </html>

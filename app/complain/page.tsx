@@ -6,8 +6,8 @@ import ComplainBox from "./ComplainBox";
 
 export default function Complain() {
   return (
-    <div className=" w-[1210px] h-[1024px] flex flex-col bg-[#f8fbff] ">
-      <div className="w-[auto] h-[48px] bg-[white] border border-b-[1px]  border-[#e8eeed] flex justify-between items-center">
+    <div className=" w-[1210px] flex flex-col bg-[#f8fbff] h-[100vh] overflow-y-scroll">
+      <div className="w-[auto] h-[48px] bg-[white] border border-b-[1px] px-[10px]  border-[#e8eeed] flex justify-between items-center">
         <div className="w-[206px]   h-[38px] top-[5px] left-[8px] flex justify-start items-center">
           <div className="w-[117px]  flex justify-between  items-center">
             <p className="w-[16px] h-[16px] ">
@@ -17,10 +17,10 @@ export default function Complain() {
           </div>
         </div>
 
-        <div className="w-[88px] h-[40px]  flex justify-between items-center ">
-          <BiBell className="w-[32px] h-[32px]  " />
+        <div className="w-[60px] h-[40px]  flex justify-between items-center ">
+          <BiBell className="w-[20px] h-[20px]  " />
 
-          <BiUser className="w-[32px] h-[32px]" />
+          <BiUser className="w-[20px] h-[20px]" />
         </div>
       </div>
 

@@ -27,7 +27,7 @@ export default function ComplaintModal() {
   return (
     <form onSubmit={submitForm}>
       <div
-        className="modal fade w-[56px] h-[790px] mx-auto"
+        className="modal  w-[56px] h-[790px] mx-auto"
         id="complaintModal"
         tabIndex={-1}
         aria-labelledby="exampleModalLabel"
@@ -37,7 +37,7 @@ export default function ComplaintModal() {
           <div className="modal-content px-[20px]">
             {/* div1 */}
             <div className="h-[97px] flex justify-between items-center">
-              <div className="flex justify-between items-center border w-[60%]">
+              <div className="flex justify-between items-center  w-[60%]">
                 <FiFilePlus className="w-[24px] h-[24px]" />
                 <div className="">
                   <p className="font-[700] text-[18px] text-[#101828] m-0">
@@ -56,7 +56,7 @@ export default function ComplaintModal() {
               ></button>
             </div>
 
-            <div className="modal-body border">
+            <div className="modal-body ">
               <div className="w-full h-[66px] flex flex-col">
                 <p className="font-[500] text-[14px] text-[#344054] mb-1">
                   Category
@@ -68,10 +68,10 @@ export default function ComplaintModal() {
                   className="border w-full h-[40px] font-[400] px-[10px]
                      rounded-[6px] text-[16px] text-[#667085]"
                 >
-                  <option value="technology">Card Dispute</option>
-                  <option value="education">Dispensation Error</option>
-                  <option value="health">Card Error</option>
-                  <option value="finance">Network Error</option>
+                  <option value="Card Dispute">Card Dispute</option>
+                  <option value="Dispensation">Dispensation Error</option>
+                  <option value="Card Error">Card Error</option>
+                  <option value="Network Error">Network Error</option>
                 </select>
               </div>
 

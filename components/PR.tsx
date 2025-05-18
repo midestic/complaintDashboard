@@ -41,7 +41,7 @@ export default function PR() {
           data-bs-target="#complaintModal"
         >
           <FiFilePlus className="w-[14.17px] h-[16.67px]  text-[#FFFFFF] " />
-          <p className="font-[500] text-[12px]  text-[#FFFFFF] align-middle ">
+          <p className="font-[500] text-[12px]  text-[#FFFFFF] align-middle m-0 ">
             Log Complaint
           </p>
         </button>

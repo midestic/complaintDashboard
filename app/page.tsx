@@ -4,21 +4,27 @@ import { FcDocument } from "react-icons/fc";
 
 export default function ComplaintsLog() {
   return (
-    <div className="border w-[1210px] h-full flex flex-col  ">
-      <div className="w-[auto] h-[48px]  border border-b-[1px]  border-[#e8eeed] flex justify-between items-center">
-        <div className="w-[206px]  h-[38px] top-[5px] left-[8px] flex justify-start items-center">
+    <div className="border w-[1210px] h-[100vh] flex flex-col  overflow-y-scroll">
+      <div
+        className="w-[auto] h-[48px]   border-b-[1px] px-[10px]
+        border-[#e8eeed] flex justify-between items-center"
+      >
+        <div
+          className="w-[206px]  h-[38px] top-[5px] left-[8px]
+         flex justify-start items-center"
+        >
           <div className="w-[117px]  flex justify-between  items-center">
-            <p className="w-[16px] h-[16px] ">
+            <p className="w-[16px] h-[16px] m-0 ">
               <FcDocument />
             </p>
-            <p className="font-[500]  text-[12px] ">Complaints: Log</p>
+            <p className="font-[500] m-0 text-[12px] ">Complaints: Log</p>
           </div>
         </div>
 
-        <div className="w-[88px] h-[40px]  flex justify-between items-center ">
-          <BiBell className="w-[32px] h-[32px]  " />
+        <div className="w-[60px] h-[40px]  flex justify-between items-center ">
+          <BiBell className="w-[20px] h-[20px]  " />
 
-          <BiUser className="w-[32px] h-[32px]" />
+          <BiUser className="w-[20px] h-[20px]" />
         </div>
       </div>
 
