@@ -1,9 +1,7 @@
 import Link from "next/link";
-import { IconBase } from "react-icons";
-import { BiCode, BiCreditCard, BiMap } from "react-icons/bi";
+import { BiCreditCard, BiMap } from "react-icons/bi";
 import { BsCreditCard2Back } from "react-icons/bs";
 import { CgCreditCard, CgList } from "react-icons/cg";
-import { CiSettings } from "react-icons/ci";
 import { FaUserShield } from "react-icons/fa";
 import { FaIcons, FaUserGroup } from "react-icons/fa6";
 import { FcDocument } from "react-icons/fc";

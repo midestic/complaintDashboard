@@ -1,18 +1,16 @@
 "use client";
 
-import { BiHome, BiHomeAlt, BiLogOut } from "react-icons/bi";
+import { BiHomeAlt, BiLogOut } from "react-icons/bi";
 import Routes from "./Routes";
 import { useState } from "react";
 import { HiOutlineMenu } from "react-icons/hi";
-import { AiOutlineMenuFold } from "react-icons/ai";
-import { FcCloseUpMode } from "react-icons/fc";
 import { CgClose } from "react-icons/cg";
 
-let logo = "/images/logo.png";
-let infraLogo = "/images/cardinfra.png";
+const logo = "/images/logo.png";
+const infraLogo = "/images/cardinfra.png";
 
 export default function Sidebar() {
-  let [nav, setNav] = useState<boolean>(false);
+  const [nav, setNav] = useState<boolean>(false);
 
   function togglenav() {
     setNav(!nav);

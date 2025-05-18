@@ -7,12 +7,12 @@ import { FiFilePlus } from "react-icons/fi";
 export default function ComplaintModal() {
   const router = useRouter();
 
-  let [category, setCategory] = useState<string | number>("");
-  let [accountNumber, setAccountNumber] = useState<number>();
-  let [customerName, setCustomerName] = useState<string>("");
-  let [complaint, setComplaint] = useState<string>("");
+  const [category, setCategory] = useState<string | number>("");
+  const [accountNumber, setAccountNumber] = useState<number>();
+  const [customerName, setCustomerName] = useState<string>("");
+  const [complaint, setComplaint] = useState<string>("");
 
-  function submitForm(e: any) {
+  function submitForm(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const params = new URLSearchParams({

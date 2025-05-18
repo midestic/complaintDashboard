@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { FiFilePlus } from "react-icons/fi";
 import PendingTable from "./tables/PendingTable";
 import ResolvedTable from "./tables/ResolvedTable";
 import ComplaintModal from "./Modals/ComplaintModal";
 
 export default function PR() {
-  let [table, setTable] = useState<any>(<PendingTable />);
+  const [table, setTable] = useState<React.ReactElement>(<PendingTable />);
 
   function toPending() {
     setTable(<PendingTable />);

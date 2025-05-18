@@ -1,15 +1,15 @@
 import { useSearchParams } from "next/navigation";
 
 export default function ComplainBox() {
-  let complainParams = useSearchParams();
+  const complainParams = useSearchParams();
 
-  let category = complainParams.get("category");
-  let accountNumber = complainParams.get("accountNumber");
-  let customerName = complainParams.get("customerName");
-  let complaint = complainParams.get("complaint");
+  const category = complainParams.get("category");
+  const accountNumber = complainParams.get("accountNumber");
+  const customerName = complainParams.get("customerName");
+  const complaint = complainParams.get("complaint");
 
-  let date = new Date();
-  let year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
   const month = date.getMonth() + 1;
   const day = date.getDate();
   const hours = date.getHours();

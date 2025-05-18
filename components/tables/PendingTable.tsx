@@ -1,4 +1,4 @@
-import { BiCalendar, BiSearch } from "react-icons/bi";
+import { BiCalendar } from "react-icons/bi";
 import { RiFilterLine } from "react-icons/ri";
 import PTable from "../PTable";
 
