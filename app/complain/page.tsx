@@ -3,6 +3,7 @@
 import { BiBell, BiUser } from "react-icons/bi";
 import { FcDocument } from "react-icons/fc";
 import ComplainBox from "./ComplainBox";
+import { Suspense } from "react";
 
 export default function Complain() {
   return (
@@ -32,7 +33,10 @@ export default function Complain() {
           View details of logged complaints and log new ones here
         </p>
       </div>
-      <ComplainBox />
+
+      <Suspense>
+        <ComplainBox />
+      </Suspense>
     </div>
   );
 }
