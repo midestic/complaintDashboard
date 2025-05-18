@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+  Lapo Complaint Log
 
-## Getting Started
+A modern complaint logging and management system built with   Next.js 13+ App Router  ,   TypeScript  ,   Tailwind CSS  , and   Bootstrap  .  
+This project allows users to log complaints, view pending and resolved complaints, and manage complaint details in a responsive dashboard.
 
-First, run the development server:
+   
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   Features
 
-## Learn More
+    Log Complaints:   Users can submit new complaints via a modal form.
+    View Complaints:   Switch between pending and resolved complaints.
+    Responsive Sidebar:   Navigation adapts for mobile and desktop.
+    Bootstrap & Tailwind:   Uses both for flexible, modern UI.
+    Query based Routing:   Complaint details are passed via URL query parameters.
+    TypeScript:   Type safety throughout the codebase.
 
-To learn more about Next.js, take a look at the following resources:
+   
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   
+lapocomplaint/
+├── app/
+│   ├── components/
+│   │   └── BootstrapClient.tsx
+│   ├── complain/
+│   │   ├── ComplainBox.tsx
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Modals/
+│   │   └── ComplaintModal.tsx
+│   ├── PR.tsx
+│   ├── Sidebar.tsx
+│   └── Routes.tsx
+├── public/
+│   └── images/
+│       ├── logo.png
+│       └── cardinfra.png
+├── styles/
+│   └── globals.css
+├── package.json
+└── README.md
+   
 
-## Deploy on Vercel
+   
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Key Files Explained
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+     app/layout.tsx 
+  The root layout for the app.
+  Imports Bootstrap and global CSS.
+  Renders the  Sidebar ,  BootstrapClient , and the main content.
+
+     components/Sidebar.tsx 
+  Responsive sidebar navigation.
+  Uses React Icons for menu toggling.
+  Shows/hides navigation on mobile.
+
+     components/PR.tsx 
+  Handles switching between pending and resolved complaints.
+  Uses state to render the appropriate table.
+  Contains the button to open the complaint modal.
+
+     components/Modals/ComplaintModal.tsx 
+  Modal form for logging a new complaint.
+  Uses controlled inputs and submits data via query parameters.
+  Navigates to  /complain  with the complaint details.
+
+     app/complain/page.tsx 
+  The page that displays complaint details.
+  Wraps  ComplainBox  in a  <Suspense>  boundary for client side hooks.
+
+     app/complain/ComplainBox.tsx 
+  Reads complaint details from the URL using  useSearchParams .
+  Displays all complaint information in a styled card.
+
+     app/components/BootstrapClient.tsx 
+  Dynamically imports Bootstrap JS for modal functionality.
+  Uses a  useEffect  hook to load Bootstrap only on the client.
+
+   
+
+   Getting Started
+
+1.   Clone the repository:  
+      bash
+   git clone https://github.com/yourusername/lapocomplaint.git
+   cd lapocomplaint
+      
+
+2.   Install dependencies:  
+      bash
+   npm install
+      
+
+3.   Run the development server:  
+      bash
+   npm run dev
+      
+
+4.   Open [http://localhost:3000](http://localhost:3000) in your browser.  
+
+   
+
+   Usage
+
+  Click   Log Complaint   to open the modal and submit a new complaint.
+  Switch between   Pending   and   Resolved   tabs to view complaints.
+  Complaint details are shown on the  /complain  page, populated from URL query parameters.
+
+   
+
+   Customization
+
+    Sidebar:   Edit  components/Sidebar.tsx  to add or remove navigation links.
+    Tables:   Customize  PendingTable  and  ResolvedTable  components as needed.
+    Styling:   Modify Tailwind classes or add custom CSS in  styles/globals.css .
+    Images:   Replace logos in  public/images/ .
+
+   
+
+   Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements or bug fixes.
+
+   
+
