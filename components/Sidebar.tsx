@@ -21,10 +21,10 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className="w-[auto] h-[18px] top-[157px] left-[28px] border ">
+      <div className="w-[auto] h-[18px] top-[157px] left-[28px]  ">
         <p className="font-[500] text-[8.5px] text-[#7E8B9C] ">MAIN MENU</p>
       </div>
-      <div className=" w-[206px] h-[668px] left-[11px]  mt-[50px] mx-auto border gap-[4px] flex flex-col">
+      <div className=" w-[206px] h-[668px] left-[11px]  mt-[20px] mx-auto  gap-[4px] flex flex-col">
         <Routes />
       </div>
 
@@ -41,7 +41,7 @@ export default function Sidebar() {
         <p className="font-[500] text-[8.5px] text-[#7E8B9C] h ">POWERED BY</p>
       </div>
 
-      <div className=" w-[auto]] h-[42px] top-[960px] left-[28px] border">
+      <div className=" w-[auto]] h-[42px] top-[960px] left-[28px] ">
         <img
           className=" w-[100%] h-[100%] object-cover top[20px] "
           src={infraLogo}
